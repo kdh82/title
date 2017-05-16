@@ -1,4 +1,4 @@
-package kr.or.dgit.dto;
+package kr.or.dgit.title.dto;
 
 public class Title {
 	String pNo;

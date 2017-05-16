@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.dgit.title.dao.TitleMapper">
+	<resultMap type="Title" id="TitleResult">
+		<id property="tCode" column="tcode"/>
+		<result property="tName" column="tname"/>
+	</resultMap>
+	<insert id="insertTitle" parameterType="Title">
+		INSERT INTO tcode, tname value (#{tCode}) (#{tName})
+	</insert>
+	<update id="updateTitle" parameterType="Title">
+		UPDATE SET tcode, tname where (#{tCode})
+	</update>
+	<delete id="delectTitle" parameterType="Title">
+		DELETE tcode, tname where (#{tCode})
+	</delete>
+	
+	<select id="selectTitleByAllCnt" parameterType="int">
+		SELECT tcode, tname title
+	</select>
+	<select id="selectTitleByOne" parameterType="Title">
+		SELECT tcode, tname where (#{tCode})
+	</select>
+</mapper>

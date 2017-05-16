@@ -1,4 +1,4 @@
-package kr.or.dgit.dao;
+package kr.or.dgit.title.dao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 import org.apache.ibatis.session.SqlSession;
 
-import kr.or.dgit.dto.Title;
+import kr.or.dgit.title.dto.Title;
 
 public class TitleMapperImpl implements TitleMapper {
 	private String namespace = "kr.or.dgit.dao.Mapper";
@@ -25,20 +25,20 @@ public class TitleMapperImpl implements TitleMapper {
 
 	@Override
 	public int updateTitle(Title title) {
-		// TODO Auto-generated method stub
-		return 0;
+		log.debug("updateTitle()");
+		return sqlSession.update(namespace+"updateTitle", title);
 	}
 
 	@Override
 	public int deleteTitle(Title title) {
-		// TODO Auto-generated method stub
-		return 0;
+		log.debug("deleteTitle()");
+		return sqlSession.delete(namespace+"deleteTitle", title);
 	}
 
 	@Override
 	public int selectTitleByAllCnt() {
-		// TODO Auto-generated method stub
-		return 0;
+		log.debug("selectTitleByAllCnt()");
+		return sqlSession.selectOne(namespace+"selectTitleByAllCnt");
 	}
 
 	@Override

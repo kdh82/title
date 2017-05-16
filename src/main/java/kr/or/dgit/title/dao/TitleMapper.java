@@ -1,8 +1,8 @@
-package kr.or.dgit.dao;
+package kr.or.dgit.title.dao;
 
 import java.util.List;
 
-import kr.or.dgit.dto.Title;
+import kr.or.dgit.title.dto.Title;
 
 public interface TitleMapper {
 
